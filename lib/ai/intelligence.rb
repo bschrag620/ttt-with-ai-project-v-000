@@ -59,6 +59,7 @@ module Minimax
         end
         new_player = Players::Computer(new_token)
         -1*(new_player.test_position(test_board))
+      end
     end
 
     def return_best_choice(array)
