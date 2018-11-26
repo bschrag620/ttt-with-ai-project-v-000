@@ -3,6 +3,9 @@ require "./lib/ai/intelligence.rb"
 
 module Players
   class Computer < AI
+
+    @@scenario = []
+    
     include Minimax::InstanceMethods
   end
 end
