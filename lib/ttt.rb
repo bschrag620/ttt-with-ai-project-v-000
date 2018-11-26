@@ -22,7 +22,7 @@ while user_input != "exit"
   else
     puts "Invalid input.Please try again."
   end
-  if play
+  if play && user_input != "exit"
     game.play
   end
 end
