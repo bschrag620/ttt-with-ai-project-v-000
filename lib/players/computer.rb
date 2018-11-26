@@ -11,5 +11,6 @@ module Players
     def self.scenarios
       @@scenarios
     end
+    
   end
 end
