@@ -4,9 +4,8 @@ class AI < Player
   attr_reader :token
   attr_accessor :board, :skill, :game
 
-  def initialize(token, game)
+  def initialize(token)
     super
-    @game = game
 
     # would like to add the ability to load different game logics depending on user choice
 
