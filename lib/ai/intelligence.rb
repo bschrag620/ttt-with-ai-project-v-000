@@ -52,7 +52,7 @@ module Minimax
       elsif self.class.game.draw?
         0
       else
-        if self.class..token == "X"
+        if self.token == "X"
           new_token = "O"
         else
           new_token = "X"
