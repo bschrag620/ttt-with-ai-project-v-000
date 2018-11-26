@@ -17,6 +17,7 @@ while user_input != "exit"
     play = true
   when "1"
     game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+    game.player_2.game = game
     play = true
   when "2"
     game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
