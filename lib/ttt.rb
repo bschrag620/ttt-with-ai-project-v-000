@@ -12,6 +12,8 @@ while user_input != "exit"
   case user_input
   when "0"
     game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+    game.player_1.game = game
+    game.player_2.game = game
     play = true
   when "1"
     game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
