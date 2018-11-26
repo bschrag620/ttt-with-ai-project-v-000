@@ -8,7 +8,7 @@ module Players
 
     include Minimax::InstanceMethods
 
-    def scenarios
+    def self.scenarios
       @@scenarios
     end
   end
