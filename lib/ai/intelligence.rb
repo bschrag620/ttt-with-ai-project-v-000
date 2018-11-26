@@ -39,7 +39,7 @@ module Minimax
 
     def create_scenario(valid_moves)
       valid_moves.each do |position|
-        self.scenarios << Scenario.new(position)
+        self.class.scenarios << Scenario.new(position)
       end
     end
 
