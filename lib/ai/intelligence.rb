@@ -45,16 +45,14 @@ module Minimax
     end
 
     def test_position(position, board)
-      test_board = Board.new
-      test_board.cells = board.cells
-      test_board.cells[position.to_i] = self.token
-      test_game = Game.new(board=test_board)
-      if test_game.won?
+      old_positions = board.cells
+      board.cells[position.to_i] = self.token
+      if self.class.game.won?
         10
-      elsif test_game.draw?
+      elsif self.class.game.draw?
         0
       else
-        if self.token == "X"
+        if self.class..token == "X"
           new_token = "O"
         else
           new_token = "X"
