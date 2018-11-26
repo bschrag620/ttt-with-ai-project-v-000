@@ -7,5 +7,9 @@ module Players
     @@scenarios = []
 
     include Minimax::InstanceMethods
+
+    def scenarios
+      @@scenarios
+    end
   end
 end
