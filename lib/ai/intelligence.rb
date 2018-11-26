@@ -37,8 +37,18 @@ module Minimax
       valid_moves
     end
 
+    def create_scenario(valid_moves)
+      valid_moves.each do |position|
+        self.scenarios << Scenario.new(position)
+      end
+    end
+
     def move(board)
       valid_moves = valid_moves(board)
+      create_scenario(valid_moves)
+      self.scenarios.each do |scenario|
+        scenario.score += test_move(scenario.position)
+      end
     end
   end
 end
