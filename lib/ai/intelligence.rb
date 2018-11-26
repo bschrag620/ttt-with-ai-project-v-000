@@ -47,8 +47,20 @@ module Minimax
       test_board = Board.new
       test_board.cells = board.cells
       test_board.cells[position] = self.token
+      if test_board.won?
+        10
+      elsif test_board.draw?
+        0
+      else
+        if self.token == "X"
+          new_token = "O"
+        else
+          new_token = "X"
+        end
+        new_player = Players::Computer(new_token)
+        -1*(new_player.test_position(test_board))
     end
-    
+
 
     def move(board)
       valid_moves = valid_moves(board)
