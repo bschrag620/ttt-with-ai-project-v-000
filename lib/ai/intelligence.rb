@@ -46,6 +46,9 @@ module Minimax
     def test_position(position, board)
       test_board = Board.new
       test_board.cells = board.cells
+      test_board.cells[position] = self.token
+    end
+    
 
     def move(board)
       valid_moves = valid_moves(board)
