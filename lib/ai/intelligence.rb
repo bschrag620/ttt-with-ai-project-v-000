@@ -59,9 +59,9 @@ module Minimax
         end
         score = 0
         new_player = Players::Computer.new(new_token)
-        new_valid_moves = valid_moves(test_board)
+        new_valid_moves = valid_moves(board)
         new_valid_moves.each do |new_move|
-          score -= (new_player.test_position(new_move, test_board))
+          score -= (new_player.test_position(new_move, board))
         end
       end
       board.cells = old_positions
