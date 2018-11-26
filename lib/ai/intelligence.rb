@@ -48,9 +48,9 @@ module Minimax
       test_board.cells = board.cells
       test_board.cells[position.to_i] = self.token
       test_game = Game.new(board=test_board)
-      if test_board.won?
+      if test_game.won?
         10
-      elsif test_board.draw?
+      elsif test_game.draw?
         0
       else
         if self.token == "X"
