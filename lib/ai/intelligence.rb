@@ -59,7 +59,7 @@ module Minimax
         else
           new_token = "X"
         end
-        new_player = Players::Computer(new_token)
+        new_player = Players::Computer.new(new_token)
         -1*(new_player.test_position(test_board))
       end
     end
