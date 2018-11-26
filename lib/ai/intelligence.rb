@@ -1,3 +1,5 @@
+require_relative "scenario.rb"
+
 module Easymax
   module ClassMethods
 

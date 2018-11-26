@@ -8,6 +8,6 @@ class AI < Player
     super
 
     # would like to add the ability to load different game logics depending on user choice
-    
+
   end
 end
