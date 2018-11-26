@@ -2,7 +2,7 @@ require "./lib/player"
 
 class AI < Player
   attr_reader :token
-  attr_accessor :board, :skill
+  attr_accessor :board, :skill, :game
 
   def initialize(token)
     super
