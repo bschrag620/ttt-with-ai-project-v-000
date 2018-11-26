@@ -4,6 +4,5 @@ require "./lib/ai/intelligence.rb"
 module Players
   class Computer < AI
     extend Minimax::ClassMethods
-
   end
 end
