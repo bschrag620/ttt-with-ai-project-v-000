@@ -6,6 +6,7 @@ class AI < Player
 
   def initialize(token, game)
     super
+    @game = game
 
     # would like to add the ability to load different game logics depending on user choice
 
