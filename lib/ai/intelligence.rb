@@ -24,16 +24,19 @@ module Minimax
   end
 
   module InstanceMethods
-    def move(board)
+
+    def valid_moves(board)
       valid_moves = []
       (1..9).each do |i|
         if board.valid_move?(i)
           valid_moves << i.to_s
         end
       end
-      puts "this was called from minimax"
+      valid_moves
+    end
 
-      valid_moves.sample
+    def move(board)
+      valid_moves = valid_moves(board)
     end
   end
 end

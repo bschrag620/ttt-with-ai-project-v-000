@@ -10,7 +10,7 @@ while user_input != "exit"
   puts "How many players (type exit to quit)? "
   user_input = gets.strip
   case user_input
-  when "0" 
+  when "0"
     game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
     play = true
   when "1"
