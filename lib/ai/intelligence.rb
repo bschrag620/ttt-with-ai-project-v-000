@@ -43,11 +43,15 @@ module Minimax
       end
     end
 
+    def test_position(position, board)
+      test_board = Board.new
+      test_board.cells = board.cells
+
     def move(board)
       valid_moves = valid_moves(board)
       create_scenario(valid_moves)
       self.scenarios.each do |scenario|
-        scenario.score += test_move(scenario.position)
+        scenario.score += test_move(scenario.position, board)
       end
     end
   end
