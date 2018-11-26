@@ -48,23 +48,24 @@ module Minimax
       old_positions = board.cells
       board.cells[position.to_i] = self.token
       if self.game.won?
-        10
+        score = 10
       elsif self.game.draw?
-        0
+        score = 0
       else
         if self.token == "X"
           new_token = "O"
         else
           new_token = "X"
         end
-        new_score = 0
+        score = 0
         new_player = Players::Computer.new(new_token)
         new_valid_moves = valid_moves(test_board)
         new_valid_moves.each do |new_move|
-          new_score -= (new_player.test_position(new_move, test_board))
+          score -= (new_player.test_position(new_move, test_board))
         end
-        new_score
       end
+      board.cells = old_positions
+      score
     end
 
     def return_best_choice(array)
