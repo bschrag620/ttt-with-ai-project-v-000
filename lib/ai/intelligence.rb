@@ -61,6 +61,20 @@ module Minimax
         -1*(new_player.test_position(test_board))
     end
 
+    def return_best_choice(array)
+      initial_score = 0
+      choices = []
+      array.each do |scenario|
+        if scenario.score > initial_score
+          initial_score = scenario.score
+          choices = []
+          choices << scenario
+        elsif scenario.score == initial_score
+          choices << scenario
+        end
+      end
+      choices
+    end
 
     def move(board)
       valid_moves = valid_moves(board)
