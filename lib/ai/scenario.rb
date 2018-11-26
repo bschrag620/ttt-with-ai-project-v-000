@@ -6,4 +6,3 @@ class Scenario
   end
 
 end
-    
