@@ -1,4 +1,5 @@
 require_relative "scenario.rb"
+require "./lib/players"
 
 module Easymax
   module ClassMethods
