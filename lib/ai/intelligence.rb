@@ -46,6 +46,8 @@ module Minimax
     def test_position(position, board)
       test_board = Board.new
       test_board.cells = board.cells
+      puts "position: #{position}"
+      puts "board: #{board.cells}"
       test_board.cells[position] = self.token
       if test_board.won?
         10
