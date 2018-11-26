@@ -81,7 +81,7 @@ module Minimax
       valid_moves = valid_moves(board)
       create_scenario(valid_moves)
       self.class.scenarios.each do |scenario|
-        scenario.score += test_move(scenario.position, board)
+        scenario.score += test_position(scenario.position, board)
       end
       return_best_choice(self.class.scenarios).sample
     end
