@@ -3,6 +3,7 @@ class Scenario
 
   def initialize(position)
     @position = position
+    @score = 0
   end
 
 end
