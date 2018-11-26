@@ -48,6 +48,7 @@ module Minimax
       test_board.cells = board.cells
       puts "position: #{position}"
       puts "board: #{board.cells}"
+      puts "test_board: #{test_board.cells}"
       test_board.cells[position] = self.token
       if test_board.won?
         10
